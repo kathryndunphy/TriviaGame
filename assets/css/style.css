@@ -1,0 +1,36 @@
+/* *{
+    background-color: lavenderblush;
+} */
+#mainHeading{
+    text-align:center;
+    color: fuchsia;
+    margin-top: 20px;
+    font-size: 60px;
+    font-family: 'Shadows Into Light', cursive;
+}
+#gameDescription{
+    text-align:center;
+    color: darkorchid;
+    font-size: 20px; 
+    font-family: 'Shadows Into Light', cursive;
+}
+
+#timeDisplay{
+    text-align: center;
+    color: seagreen;
+    font-family: 'Righteous', cursive;
+    font-size:40px;
+}
+
+#quizContent{
+    background-color: coral;
+     
+}
+
+#quizForm {
+    font-family: 'Special Elite', cursive;
+    color: palegoldenrod;
+}
+
+
+ 

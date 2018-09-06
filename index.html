@@ -1,0 +1,127 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+<title>Trivia Game</title>
+<link rel="stylesheet" href="assets/css/style.css">
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta http-equiv="X-UA-Compatible" content="ie=edge">
+<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css" integrity="sha384-MCw98/SFnGE8fJT3GXwEOngsV7Zt27NXFoaoApmYm81iuXoPkFOJwJ8ERdknLPMO"
+crossorigin="anonymous">
+<script src="https://code.jquery.com/jquery-3.3.1.js" integrity="sha256-2Kok7MbOyxpgUVvAk/HJ2jigOSYS2auK4Pfzbm7uH60="
+crossorigin="anonymous"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+</head>
+
+<body>
+
+<!-- Top descriptive information -->
+<div id="mainHeading"><h1>Movie Trivia Game</h1></div>
+
+<div id="gameDescription"><p>The timer starts ticking when you begin the quiz! 
+    Try and get at least 70% of the questions correct in order to pass the quiz.</p></div>
+
+<!-- Start button -->
+<div id="beginQuiz"><button type="button" class="btn btn-primary btn-lg btn-block">Begin Quiz</button></div>
+<!-- IDs used for the timer -->
+<div id="timeDisplay"></div>
+<div id="stop"></div>
+<div id="resume"></div>
+
+<!-- Quiz Content -->
+<div id="quizContent" class="form-check">
+<form id="quizForm">
+<br><br>
+<h4>What classic science fiction film features an artificial intelligence antagonist named 'HAL'?</h4>
+<div class="form-check">
+<input type="radio" id="q1" name="question1" value="2001: A Space Odyssey"><label class="form-check-label" for="q1">2001: A Space Odyssey</label><br>
+<input type="radio" id="q1" name="question1" value="Alien"><label class="form-check-label" for="q1">Alien</label><br>
+<input type="radio" id="q1" name="question1" value="Interstellar"><label class="form-check-label" for="q1">Interstellar</label><br>
+<input type="radio" id="q1" name="question1" value="Blade Runner"><label class="form-check-label" for="q1">Blade Runner</label><br>
+</div><br>
+
+<h4>What crime thriller film features a rat in the mob and a rat in the police department?</h4>
+<div class="form-check">
+<input type="radio" id="q2" name="question2" value="Goodfellas"><label class="form-check-label" for="q2">Goodfellas</label><br>
+<input type="radio" id="q2" name="question2" value="Heat"><label class="form-check-label" for="q2">Heat</label><br>
+<input type="radio" id="q2" name="question2" value="The Departed"><label class="form-check-label" for="q2">The Departed</label><br>
+<input type="radio" id="q2" name="question2" value="The Godfather"><label class="form-check-label" for="q2">The Godfather</label><br>
+</div><br>
+
+<h4>This movie primarily focuses on exploring the meaning of the 'rosebud' and critics often refer to it as one the best movies in film history.</h4>
+<div class="form-check">
+<input type="radio" id="q3" name="question3" value="Lawrence of Arabia">Lawrence of Arabia<br>
+<input type="radio" id="q3" name="question3" value="Citizen Kane">Citizen Kane<br>
+<input type="radio" id="q3" name="question3" value="Rosemary's Baby">Rosemary's Baby<br>
+<input type="radio" id="q3" name="question3" value="Psycho">Psycho<br>
+</div><br>
+
+<h4>"Of all the gin joints in all the world and she had to walk into mine."</h4>
+<div class="form-check">
+<input type="radio" id="q4" name="question4" value="Sunset Boulevard">Sunset Boulevard<br>
+<input type="radio" id="q4" name="question4" value="12 Angry Men">12 Angry Men<br>
+<input type="radio" id="q4" name="question4" value="A Streetcar Named Desire">A Streetcar Named Desire<br>
+<input type="radio" id="q4" name="question4" value="Casablanca">Casablanca<br>
+</div><br>
+
+<h4>"Gentlemen, you can't fight in here! This is the War Room!"</h4>
+<div class="form-check">
+<input type="radio" id="q5" name="question5" value="Badlands">Badlands<br>
+<input type="radio" id="q5" name="question5" value="Dr. Strangelove Or How I Learned to Stop Worrying and Love the Bomb">Dr. Strangelove Or How I Learned to Stop Worrying and Love the Bomb<br>
+<input type="radio" id="q5" name="question5" value="Some Like It Hot">Some Like It Hot<br>
+<input type="radio" id="q5" name="question5" value="Goldfinger">Goldfinger<br>
+</div><br>
+
+<h4>"We're the middle children of history, man. No purpose or place. We have no Great War. No Great Depression. Our great war is a spiritual war. Our great depression is our lives."</h4>
+<div class="form-check">
+<input type="radio" id="q6" name="question6" value="Fight Club">Fight Club<br>
+<input type="radio" id="q6" name="question6" value="The Shawshank Redemption">The Shawshank Redemption<br>
+<input type="radio" id="q6" name="question6" value="Seven">Seven<br>
+<input type="radio" id="q6" name="question6" value="Dazed and Confused">Dazed and Confused<br>
+</div><br>
+
+<h4>"There is a difference between knowing the path and walking the path."</h4>
+<div class="form-check">
+<input type="radio" id="q7" name="question7" value="Clueless">Clueless<br>
+<input type="radio" id="q7" name="question7" value="Pulp Fiction">Pulp Fiction<br>
+<input type="radio" id="q7" name="question7" value="The Matrix">The Matrix<br>
+<input type="radio" id="q7" name="question7" value="Titanic">Titanic<br>
+</div><br>
+
+<h4>"Your scientists were so preoccupied with whether they could, they didn't stop to think if they should."</h4>
+<div class="form-check">
+<input type="radio" id="q8" name="question8" value="Jurassic Park">Jurassic Park<br>
+<input type="radio" id="q8" name="question8" value="Terminator">Terminator<br>
+<input type="radio" id="q8" name="question8" value="Edge of Tomorrow">Edge of Tomorrow<br>
+<input type="radio" id="q8" name="question8" value="There Will Be Blood">There Will Be Blood<br>
+</div><br>
+
+<h4>"I can't really remember when I last had any hope, and I certainly can't remember when anyone else did either because really, since women stopped being able to have babies, what's left to hope for?"</h4>
+<div class="form-check">
+<input type="radio" id="q9" name="question9" value="Pan's Labyrinth">Pan's Labyrinth<br>
+<input type="radio" id="q9" name="question9" value="Spirited Away">Spirited Away<br>
+<input type="radio" id="q9" name="question9" value="No Country for Old Men">No Country for Old Men<br>
+<input type="radio" id="q9" name="question9" value="Children of Men">Children of Men<br>
+</div><br>
+
+<h4>"I could die right now, Clem. I'm just... happy. I'm exactly where I want to be."</h4>
+<div class="form-check">
+<input type="radio" id="q10" name="question10" value="Eternal Sunshine of the Spotless Mind">Eternal Sunshine of the Spotless Mind<br>
+<input type="radio" id="q10" name="question10" value="Memento">Memento<br>
+<input type="radio" id="q10" name="question10" value="Almost Famous">Almost Famous<br>
+<input type="radio" id="q10" name="question10" value="Brokeback Mountain">Brokeback Mountain<br>
+</div><br>
+
+<div id="submitButton"><button type="button" class="btn btn-primary btn-lg btn-block">Submit Answers & See Your Results!</button></div>
+
+</form>
+</div>
+
+<div id="finalScore"></div>
+
+<script src="assets/javascript/app.js"></script>
+
+</body>
+
+</html>
